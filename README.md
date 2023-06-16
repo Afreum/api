@@ -171,31 +171,31 @@ URL parameters are:
 Calling the Token Query URL with the url parameter **json=** will return all the tokens listed in that JSON file. E.g. **https://afreum.com/ice/sites/app/api/tokens.cfm?json=afr_token_stable** (without the .json extension) will return all Afreum stable country tokens, which are backed by USDC.
 
 **token=[]:** value is a comma-separated list of valid Afreum tokens, or supported third party tokens
-Calling the Token Query URL with the url parameter **token=** will return data for the tokens in your comma-separated list.
+Calling the Token Query URL with the url parameter **token=ANGN,AKES** will return data for the tokens in your comma-separated list.
 
 
 **issuer=[]:** value is the 56 character Stellar address of the token issuer. 
-Calling the Token Query URL with the url parameter **issuer=** will return data for the tokens issued by that issuer.
+Calling the Token Query URL with the url parameter **issuer=GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W** will return data for the tokens issued by that issuer, in this case the AFR token.
 
 **domain=[]:** value is the domain name of the token issuer. For Afreum tokens these are **afreum.com or afreum.net**
-Calling the Token Query URL with the url parameter **domain=** will return data for the tokens issued by that domain.
+Calling the Token Query URL with the url parameter **domain=afreum.com** will return data for the tokens issued by that domain.
 
 **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values are **id,token,issuer,domain,description,is_main,is_governance,is_country_token,is_africa,DTI,DTI_Long_Name,logo**
-Calling the Token Query URL with the url parameter **fields=** will return data containing only the JSON fields specified in your comma separated list.
+Calling the Token Query URL with the url parameter **fields=token,issuer,domain,logo** will return data containing only the JSON fields specified in your comma separated list.
 
-**sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Accepted values are **id (default),token,is_main,is_native** Calling the Token Query URL with the url parameter **sort=** will return data sorted by the field specified ascending.
+**sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Accepted values are **id (default),token,is_main,is_native** Calling the Token Query URL with the url parameter **sort=token** will return data sorted by the field specified ascending.
 
 **is_africa=[]:** value is a boolean (either 1 or 0, 1 will return all African country tokens and 0 will return all non-African country tokens)
-Calling the Token Query URL with the url parameter **is_africa=** will return data for the African country tokens.
+Calling the Token Query URL with the url parameter **is_africa=1** will return data for the African country tokens.
 
 **is_main=[]:** value is a boolean (either 1 or 0, 1 will return the AFR token, 0 will return non-AFR tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
-Calling the Token Query URL with the url parameter **is_main=** will return data for the AFR token.
+Calling the Token Query URL with the url parameter **is_main=1** will return data for the AFR token.
 
 **is_governance=[]:** value is a boolean (either 1 or 0, 1 will return the AFRX token, 0 will return non-AFRX tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
-Calling the Token Query URL with the url parameter **is_governance=** will return data for the AFRX token.
+Calling the Token Query URL with the url parameter **is_governance=1** will return data for the AFRX token.
 
 **is_country_token=[]:** value is a boolean (either 1 or 0, 1 will return country tokens, 0 will return non-country tokens such as AFR and AFRX)
-Calling the Token Query URL with the url parameter **is_country_token=** will return data for the Afreum country tokens. These tokens may be Afreum flexible tokens, Afreum stable tokens, or third party tokens.
+Calling the Token Query URL with the url parameter **is_country_token=1** will return data for the Afreum country tokens. These tokens may be Afreum flexible tokens, Afreum stable tokens, or third party tokens.
 
 **is_native=[]:** value is a boolean (either 1 or 0, 1 will return the XLM token, 0 will return non-XLM tokens; only useful for querying afr_token_other.json)
-Calling the Token Query URL with the url parameter **is_native=** will return data for the XLM token.
+Calling the Token Query URL with the url parameter **is_native=1** will return data for the XLM token.
