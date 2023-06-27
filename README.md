@@ -1,20 +1,20 @@
 # API
-The Afreum API is a collection of publically available files that allow anyone, including the Afreum development team, to build apps and services that leverarge the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the vast majority of the files to be immutable, and available to anyone who wants to use or share them. 
+The Afreum API is a collection of publically available **JSON** files on **IPFS**, Javascript files, and **API** URLs that return **JSON** or specific values. Anyone, including various teams developing for the **Afreum Ecosystem**, can build apps and services that leverage the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the **JSON** files to be immutable, and accessible to both internal and external developers. Wherever possible, developers should use the immutable files in their apps to ensure availability and consistency.
 
 # Tokens
-The Tokens API consists of a number of JSON files hosted on the InterPlanetary File System (IPFS) and a number of URLs that are queried using URL parameters and returning JSON output. Here are descriptions and links to the various files:
+The **Tokens API** consists of a number of **JSON** and **Javascript** files hosted on the **InterPlanetary File System (IPFS)**,  and a number of **URL**s that are queried using URL parameters that return JSON output, or in the case of rates, numeric values. Here are descriptions and links to the various files:
 
 # All Afreum Tokens
 
 **File Name:** afr_token_all.json
 
-**Unique Content Identifier (CID):** QmSJWA8ht58PPnZjmLRjLHmChseYNmota7TVA18N6GgQvL
+**Unique Content Identifier (CID):** QmR6HWa5BExBLHFh9xzkyMqnyySgfDUY3MquQPRX2pTxQ1
 
-**IPFS Link:** https://ipfs.io/ipfs/QmSJWA8ht58PPnZjmLRjLHmChseYNmota7TVA18N6GgQvL
+**IPFS Link:** https://ipfs.io/ipfs/QmR6HWa5BExBLHFh9xzkyMqnyySgfDUY3MquQPRX2pTxQ1 _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_all.json
 
-This json file returns usefule data on all 314 Afreum ecosytem tokens, including AFR, AFRX, Afreum flexible country tokens (starting with 'A') and USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
+This json file returns usefule dat on all 314 Afreum ecosytem tokens, including AFR, AFRX, Afreum flexible country tokens (starting with 'A') and USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
 
 **id:** (used for sorting) 
 
@@ -50,11 +50,11 @@ Developers may call this file directly to retrieve all Afreum tokens, excluding 
 
 **Unique Content Identifier (CID):** Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws
 
-**IPFS Link:** https://ipfs.io/ipfs/Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws
+**IPFS Link:** https://ipfs.io/ipfs/Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_flexible.json
 
-This json file returns usefule data on 158 Afreum ecosytem tokens, including AFR, AFRX, and flexible country tokens (starting with 'A'). The file does not include USDC-backed stable country tokens (starting with 'S'). Returned fields include: 
+This json file returns usefule data on the 158 flexible Afreum ecosytem tokens, including AFR, AFRX, and flexible country tokens (starting with 'A'). The file does not include USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
 
 **id:** (used for sorting) 
 
@@ -90,11 +90,11 @@ Developers may call this file directly to retrieve all Afreum flexible tokens, i
 
 **Unique Content Identifier (CID):** Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR
 
-**IPFS Link:** https://ipfs.io/ipfs/Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR
+**IPFS Link:** https://ipfs.io/ipfs/Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_stable.json
 
-This json file returns usefule data on 156 Afreum ecosytem stable country tokens, which are backed by, and redeemable for, USDC. This file includes only USDC-backed stable country tokens (starting with 'S'). Returned fields include: 
+This json file returns usefule data on 156 Afreum ecosytem stable country tokens, which are exchangeable 1:1 with the underlying fiat and backed by, and redeemable for, USDC (Stellar). This file includes only USDC-backed stable country tokens (starting with 'S'). Returned fields include: 
 
 **id:** (used for sorting) 
 
@@ -124,13 +124,13 @@ Developers may call this file directly to retrieve all Afreum stable country tok
 
 **File Name:** afr_token_other.json
 
-**Unique Content Identifier (CID):** QmWT69RfRc3n184sS56qEpvuR6Jqp2bgh8VqZmt2HvYGx6
+**Unique Content Identifier (CID):** QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF
 
-**IPFS Link:** https://ipfs.io/ipfs/QmWT69RfRc3n184sS56qEpvuR6Jqp2bgh8VqZmt2HvYGx6
+**IPFS Link:** https://ipfs.io/ipfs/QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_other.json
 
-This json file returns usefule data on third-party tokens supported by Afreum ecosytem. These include the native Stellar blockchain token XLM, USDC, and other tokens. Returned fields include: 
+This json file returns useful data on third-party Stellar assets supported by Afreum ecosytem. These include the native Stellar blockchain token XLM, USDC, and other whitelisted Stellar assets such as BTC, ETH, yBTC, yETH, yXLM, and yUSDC. Returned fields include: 
 
 **id:** (used for sorting) 
 
@@ -153,12 +153,87 @@ This json file returns usefule data on third-party tokens supported by Afreum ec
 **logo:** an IPFS link to the logo of the token
 
 **USAGE:** 
-Developers may call this file directly to retrieve all third-party issued tokens supported by the Afreum Ecosystem. This includes tokens such as XLM, USDC etc.
+Developers may call this file directly to retrieve all third-party Stellar-issued tokens supported by the Afreum Ecosystem. This includes tokens such as XLM, USDC etc.
 
 
-# JSON QUERY LINKS
+# External Tokens
 
-In addition to these files that can be called remotely by developers and manipulated locally, Afreum also hosts a number of URLs that can be queried via URL parameters to return filtered JSON results. These include:
+**File Name:** afr_token_external.json
+
+**Unique Content Identifier (CID):** QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc
+
+**IPFS Link:** https://ipfs.io/ipfs/QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
+
+**Afreum Link:** https://api.afreum.com/tokens/afr_token_external.json
+
+This json file returns useful data on third-party non-Stellar assets supported by Afreum Ecosytem. These include whitelisted tokens such as XLM (externally quoted), BTC, ETH, ADA, LTC, DASH, BUSD, USDT and USDC. It is important to note that with the exception of XLM, all other tokens exist on chains other than Stellar. Returned fields include: 
+
+**id:** (used for sorting) 
+
+**token:** the token symbol
+
+**issuer:** the issuing Stellar blockchain address
+
+**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
+
+**description:** a short description of the token
+
+**is_native:** a boolean indicating whether the token is the native token of the Stellar blockchain, namely XLM
+
+**is_country_token:** a boolean indicating whether the token is linked to a country supported in the Afreum ecosystem, namely fiat-backed Stellar anchor-issued tokens
+
+**DTI:** the ISO 24165 digital token identifier of the third-party token, if any
+
+**DTI Long Name:** the name of token linked to the digital token identifier
+
+**logo:** an IPFS link to the logo of the token
+
+**USAGE:** 
+Developers may call this file directly to retrieve all third-party tokens (external to Stellar with the exception of XLM) supported by the Afreum Ecosystem.
+
+
+# IMMUTABLE SCRIPTS: JSON
+
+Afreum also provides a number of immutable **Javascript** files on **IPFS** that developers can call on the client side to retrieve token, geolocation, rates, and other other data. These can be  called in HTML with **<script>** tags and data filtered via tage attributes. These scripts generally write the JSON results to the Javascript console, which developers can then use in their own code. The following scripts are available:
+
+**Token Scripts**
+
+Retrieve all Afreum tokens issued on Stellar, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_stable="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+  
+Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_other.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_native="" data-is_africa="" data-is_country_token="" data-DTI=""></script>**_
+
+Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_external.js" data-id="" data-token=""></script>**_
+
+
+**Geolocation Scripts**
+
+Afreum is a global ecosystem so we also provide immutable **JSON** files providing useful geo data on countries, provinces, cities and so on. The following are useful scripts for this purpose:
+
+Retrieve all **Countries** supported by Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/geo/countries.js" data-id="" data-iso_2="" data-iso_3="" data-objectid="" data-contobjectid="" data-is_africa=""></script>**_
+
+Retrieve all **Provinces** supported by Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js" data-Country_Code="" data-objectId=""></script>**_
+
+Retrieve all **Cities** supported by Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" data-countryobjectId="" data-objectId=""></script>**_
+
+**NOTE:** The **src** can be replaced with the following **IPFS** links for immutability:
+
+**tokens.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+**tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
+**tokens_external:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
+
+**countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
+**provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
+**cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
+  
+# API QUERY LINKS: JSON
+
+In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of URLs that can be queried via URL parameters to return filtered JSON results. These include:
 
 **Token Query URL** https://afreum.com/ice/sites/app/api/tokens.cfm
 
