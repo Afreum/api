@@ -213,22 +213,30 @@ _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_exte
 Afreum is a global ecosystem so we also provide immutable **JSON** files providing useful geo data on countries, provinces, cities and so on. The following are useful scripts for this purpose:
 
 Retrieve all **Countries** supported by Afreum Ecosystem, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/geo/countries.js" data-id="" data-iso_2="" data-iso_3="" data-objectid="" data-contobjectid="" data-is_africa=""></script>**_
 
 Retrieve all **Provinces** supported by Afreum Ecosystem, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js" data-Country_Code="" data-objectId=""></script>**_
 
 Retrieve all **Cities** supported by Afreum Ecosystem, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" data-countryobjectId="" data-objectId=""></script>**_
 
 **NOTE:** The **src** can be replaced with the following **IPFS** links for immutability:
 
 **tokens.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+
 **tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
+
 **tokens_external:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
 
+
 **countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
+
 **provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
+
 **cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
   
 # API QUERY LINKS: JSON
