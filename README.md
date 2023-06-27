@@ -16,29 +16,29 @@ The **Tokens API** consists of a number of **JSON** and **Javascript** files hos
 
 This json file returns usefule dat on all 314 Afreum ecosytem tokens, including AFR, AFRX, Afreum flexible country tokens (starting with 'A') and USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
 
-**id:** (used for sorting) 
+* **id:** (used for sorting) 
 
-**token:** the token symbol
+* **token:** the token symbol
 
-**issuer:** the issuing Stellar blockchain address
+* **issuer:** the issuing Stellar blockchain address
 
-**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
+* **domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
 
-**description:** a short description of the token
+* **description:** a short description of the token
 
-**is_main:** a boolean indicating whether the token is the main token of the Afreum ecosystem, namely AFR
+* **is_main:** a boolean indicating whether the token is the main token of the Afreum ecosystem, namely AFR
 
-**is_governance:** a boolean indicating whether the token is the governance token of the Afreum ecosystem, namely AFRX
+* **is_governance:** a boolean indicating whether the token is the governance token of the Afreum ecosystem, namely AFRX
 
-**is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as AAED or SKES
+* **is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as AAED or SKES
 
-**is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as ANGN or SNGN 
+* **is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as ANGN or SNGN 
 
-**DTI:** the ISO 24165 digital token identifier of the token
+* **DTI:** the ISO 24165 digital token identifier of the token
 
-**DTI Long Name:** the name of token linked to the digital token identifier
+* **DTI Long Name:** the name of token linked to the digital token identifier
 
-**logo:** an IPFS link to the logo of the token
+* **logo:** an IPFS link to the logo of the token
 
 **USAGE:** 
 Developers may call this file directly to retrieve all Afreum tokens, excluding third party tokens (such as XLM, USDC) supported by the Afreum ecosystem.
@@ -56,31 +56,31 @@ Developers may call this file directly to retrieve all Afreum tokens, excluding 
 
 This json file returns usefule data on the 158 flexible Afreum ecosytem tokens, including AFR, AFRX, and flexible country tokens (starting with 'A'). The file does not include USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
 
-**id:** (used for sorting) 
+* **id:** (used for sorting) 
 
-**token:** the token symbol
+* **token:** the token symbol
 
-**issuer:** the issuing Stellar blockchain address
+* **issuer:** the issuing Stellar blockchain address
 
-**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
+* **domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
 
-**description:** a short description of the token
+* **description:** a short description of the token
 
-**is_main:** a boolean indicating whether the token is the main token of the Afreum ecosystem, namely AFR
+* **is_main:** a boolean indicating whether the token is the main token of the Afreum ecosystem, namely AFR
 
-**is_governance:** a boolean indicating whether the token is the governance token of the Afreum ecosystem, namely AFRX
+* **is_governance:** a boolean indicating whether the token is the governance token of the Afreum ecosystem, namely AFRX
 
-**is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as AAED or ANGN
+* **is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as AAED or ANGN
 
-**is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as ANGN or SNGN 
+* **is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as ANGN or SNGN 
 
-**DTI:** the ISO 24165 digital token identifier of the token
+* **DTI:** the ISO 24165 digital token identifier of the token
 
-**DTI Long Name:** the name of token linked to the digital token identifier
+* **DTI Long Name:** the name of token linked to the digital token identifier
 
-**logo:** an IPFS link to the logo of the token
+* **logo:** an IPFS link to the logo of the token
 
-**USAGE:** 
+* **USAGE:** 
 Developers may call this file directly to retrieve all Afreum flexible tokens, including AFR, AFRX, and Afreum flexible country tokens, and excluding Afreum stable country tokens (backed by USDC) and third party tokens (such as XLM, USDC) supported by the Afreum ecosystem.
 
 
@@ -96,25 +96,25 @@ Developers may call this file directly to retrieve all Afreum flexible tokens, i
 
 This json file returns usefule data on 156 Afreum ecosytem stable country tokens, which are exchangeable 1:1 with the underlying fiat and backed by, and redeemable for, USDC (Stellar). This file includes only USDC-backed stable country tokens (starting with 'S'). Returned fields include: 
 
-**id:** (used for sorting) 
+* **id:** (used for sorting) 
 
-**token:** the token symbol
+* **token:** the token symbol
 
-**issuer:** the issuing Stellar blockchain address
+* **issuer:** the issuing Stellar blockchain address
 
-**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
+* **domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
 
-**description:** a short description of the token
+* **description:** a short description of the token
 
-**is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as SAED or SNGN
+* **is_country_token:** a boolean indicating whether the token is linked to a country in the Afreum ecosystem, namely tokens such as SAED or SNGN
 
-**is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as SNGN or SNGN 
+* **is_africa:** a boolean indicating whether the token is linked to an African country in the Afreum ecosystem, namely tokens such as SNGN or SNGN 
 
-**DTI:** the ISO 24165 digital token identifier of the token
+* **DTI:** the ISO 24165 digital token identifier of the token
 
-**DTI Long Name:** the name of token linked to the digital token identifier
+* **DTI Long Name:** the name of token linked to the digital token identifier
 
-**logo:** an IPFS link to the logo of the token
+* **logo:** an IPFS link to the logo of the token
 
 **USAGE:** 
 Developers may call this file directly to retrieve all Afreum stable country tokens, excluding AFR, AFRX, Afreum flexible country tokens, and third party tokens (such as XLM, USDC) supported by the Afreum ecosystem.
@@ -132,25 +132,25 @@ Developers may call this file directly to retrieve all Afreum stable country tok
 
 This json file returns useful data on third-party Stellar assets supported by Afreum ecosytem. These include the native Stellar blockchain token XLM, USDC, and other whitelisted Stellar assets such as BTC, ETH, yBTC, yETH, yXLM, and yUSDC. Returned fields include: 
 
-**id:** (used for sorting) 
+* **id:** (used for sorting) 
 
-**token:** the token symbol
+* **token:** the token symbol
 
-**issuer:** the issuing Stellar blockchain address
+* **issuer:** the issuing Stellar blockchain address
 
-**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
+* **domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
 
-**description:** a short description of the token
+* **description:** a short description of the token
 
-**is_native:** a boolean indicating whether the token is the native token of the Stellar blockchain, namely XLM
+* **is_native:** a boolean indicating whether the token is the native token of the Stellar blockchain, namely XLM
 
-**is_country_token:** a boolean indicating whether the token is linked to a country supported in the Afreum ecosystem, namely fiat-backed Stellar anchor-issued tokens
+* **is_country_token:** a boolean indicating whether the token is linked to a country supported in the Afreum ecosystem, namely fiat-backed Stellar anchor-issued tokens
 
-**DTI:** the ISO 24165 digital token identifier of the third-party token, if any
+* **DTI:** the ISO 24165 digital token identifier of the third-party token, if any
 
-**DTI Long Name:** the name of token linked to the digital token identifier
+* **DTI Long Name:** the name of token linked to the digital token identifier
 
-**logo:** an IPFS link to the logo of the token
+* **logo:** an IPFS link to the logo of the token
 
 **USAGE:** 
 Developers may call this file directly to retrieve all third-party Stellar-issued tokens supported by the Afreum Ecosystem. This includes tokens such as XLM, USDC etc.
@@ -168,25 +168,11 @@ Developers may call this file directly to retrieve all third-party Stellar-issue
 
 This json file returns useful data on third-party non-Stellar assets supported by Afreum Ecosytem. These include whitelisted tokens such as XLM (externally quoted), BTC, ETH, ADA, LTC, DASH, BUSD, USDT and USDC. It is important to note that with the exception of XLM, all other tokens exist on chains other than Stellar. Returned fields include: 
 
-**id:** (used for sorting) 
+* **id:** (used for sorting) 
 
-**token:** the token symbol
+* **token:** the token symbol
 
-**issuer:** the issuing Stellar blockchain address
-
-**domain:** the issuing domain name (afreum.com for flexible tokens or afreum.net for stable tokens)
-
-**description:** a short description of the token
-
-**is_native:** a boolean indicating whether the token is the native token of the Stellar blockchain, namely XLM
-
-**is_country_token:** a boolean indicating whether the token is linked to a country supported in the Afreum ecosystem, namely fiat-backed Stellar anchor-issued tokens
-
-**DTI:** the ISO 24165 digital token identifier of the third-party token, if any
-
-**DTI Long Name:** the name of token linked to the digital token identifier
-
-**logo:** an IPFS link to the logo of the token
+* **logo:** an IPFS link to the logo of the token
 
 **USAGE:** 
 Developers may call this file directly to retrieve all third-party tokens (external to Stellar with the exception of XLM) supported by the Afreum Ecosystem.
@@ -198,13 +184,16 @@ Afreum also provides a number of immutable **Javascript** files on **IPFS** that
 
 **Token Scripts**
 
-Retrieve all Afreum tokens issued on Stellar, filtered by the script attributes:
+* Retrieve all Afreum tokens issued on Stellar, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_stable="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
   
-Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_other.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_native="" data-is_africa="" data-is_country_token="" data-DTI=""></script>**_
 
-Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filtered by the script attributes:
+
 _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_external.js" data-id="" data-token=""></script>**_
 
 
@@ -212,32 +201,29 @@ _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_exte
 
 Afreum is a global ecosystem so we also provide immutable **JSON** files providing useful geo data on countries, provinces, cities and so on. The following are useful scripts for this purpose:
 
-Retrieve all **Countries** supported by Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all **Countries** supported by Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/geo/countries.js" data-id="" data-iso_2="" data-iso_3="" data-objectid="" data-contobjectid="" data-is_africa=""></script>**_
 
-Retrieve all **Provinces** supported by Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all **Provinces** supported by Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js" data-Country_Code="" data-objectId=""></script>**_
 
-Retrieve all **Cities** supported by Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all **Cities** supported by Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" data-countryobjectId="" data-objectId=""></script>**_
 
+
 **NOTE:** The **src** can be replaced with the following **IPFS** links for immutability:
 
-**tokens.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+* **tokens.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+* **tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
+* **tokens_external:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
 
-**tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
+* **countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
+* **provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
+* **cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
 
-**tokens_external:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
-
-
-**countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
-
-**provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
-
-**cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
   
 # API QUERY LINKS: JSON
 
