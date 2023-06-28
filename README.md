@@ -178,16 +178,24 @@ This json file returns useful data on third-party non-Stellar assets supported b
 Developers may call this file directly to retrieve all third-party tokens (external to Stellar with the exception of XLM) supported by the Afreum Ecosystem.
 
 
-# IMMUTABLE SCRIPTS: JSON
+# IMMUTABLE SCRIPTS: JAVASCRIPT
 
 Afreum also provides a number of immutable **Javascript** files on **IPFS** that developers can call on the client side to retrieve token, geolocation, rates, and other other data. These can be  called in HTML with **<script>** tags and data filtered via tage attributes. These scripts generally write the JSON results to the Javascript console, which developers can then use in their own code. The following scripts are available:
 
+
+
 **Token Scripts**
 
-* Retrieve all Afreum tokens issued on Stellar, filtered by the script attributes:
+* Retrieve all Afreum tokens issued on Stellar, including AFR, AFRX, flexible country tokens and stable country tokens, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_stable="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
-  
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_all.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_stable="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+
+* Retrieve all flexible Afreum tokens issued on Stellar, including AFR, AFRX, and flexible country tokens, filtered by the script attributes:
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_flexible.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_stable.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+
 * Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_other.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_native="" data-is_africa="" data-is_country_token="" data-DTI=""></script>**_
@@ -195,6 +203,7 @@ _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_othe
 * Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_external.js" data-id="" data-token=""></script>**_
+
 
 
 **Geolocation Scripts**
@@ -214,17 +223,49 @@ _**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js" 
 _**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" data-countryobjectId="" data-objectId=""></script>**_
 
 
+
+**Exchange Rate Scripts**
+
+Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts.
+
+* Retrieve exchange rates between **Stellar Assets** supported by Afreum Ecosystem, including AFR, AFRX, Afreum flexible country tokens, and other Stellar assets such as XLM, and USDC, filtered by the script attributes:
+
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_flexible.js" data-base_asset_code="" data-base_asset_type="credit_alphanum4" data-base_asset_issuer="" data-counter_asset_code="" data-counter_asset_type="" data-counter_asset_issuer=""></script>**_
+
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Afreum Stable Country Tokens** (which are the same rates as the underlying fiat) supported by Afreum Ecosystem, filtered by the script attributes:
+
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable.js" data-api_key="" data-base_currency="USD" data-stable_token=""></script>**_
+
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Fiat Currencies** supported by Afreum Ecosystem, filtered by the script attributes:
+
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_fiat.js" data-api_key="" data-base_currency="USD"  data-counter_currency=""></script>**_
+
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Third Party Cryptos**, such as BBTC, ETH, ADA etc. supported by Afreum Ecosystem, filtered by the script attributes:
+
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js" data-api_key="" data-crypto="" data-currency="USD"></script>**_
+
+
 **NOTE:** The **src** can be replaced with the following **IPFS** links for immutability:
 
-* **tokens.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+* **tokens_all.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
+* **tokens_flexible.js:**
+* **tokens_stable.js:**  
 * **tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
-* **tokens_external:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
+* **tokens_external.js:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
 
 * **countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
 * **provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
 * **cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
 
-  
+* **rates_stellar.js:**
+* **rates_stable.js:**
+* **rates_fiat.js:**
+* **rates_crypto.js:**
+
+**NOTE:** Afreum uses 7 decimal places for final exchange rates used in Stellar blockchain transactions. Developers should use 7 decimal places for exchange rates and token amounts prior to sending transactions to the Stellar blockchain.
+
+     
+
 # API QUERY LINKS: JSON
 
 In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of URLs that can be queried via URL parameters to return filtered JSON results. These include:
