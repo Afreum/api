@@ -1,5 +1,5 @@
 # API
-The Afreum API is a collection of publically available **JSON** files on **IPFS**, Javascript files, and **API** URLs that return **JSON** or specific values. Anyone, including various teams developing for the **Afreum Ecosystem**, can build apps and services that leverage the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the **JSON** files to be immutable, and accessible to both internal and external developers. Wherever possible, developers should use the immutable files in their apps to ensure availability and consistency.
+The Afreum API is a collection of publically available **JSON** files on **IPFS**, Javascript files, and **API** URLs that return **JSON** or specific values. Anyone, including various teams developing for the **Afreum Ecosystem**, can build apps and services that leverage the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the **JSON** files to be immutable, and accessible to both internal and external developers. Wherever possible, developers should use the immutable files in their apps to ensure availability and consistency. The **JSON** files can be accessed here: **https://api.afreum.com**
 
 # Tokens
 The **Tokens API** consists of a number of **JSON** and **Javascript** files hosted on the **InterPlanetary File System (IPFS)**,  and a number of **URL**s that are queried using URL parameters that return JSON output, or in the case of rates, numeric values. Here are descriptions and links to the various files:
@@ -226,43 +226,69 @@ _**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" dat
 
 **Exchange Rate Scripts**
 
-Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts.
+Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts. **IMPORTANT:** Rates returned are for UI display only. For actual production transactions, please use the universal exchange rates endpoints listed below under **API QUERY LINKS: EXCHANGE RATES**
+
 
 * Retrieve exchange rates between **Stellar Assets** supported by Afreum Ecosystem, including AFR, AFRX, Afreum flexible country tokens, and other Stellar assets such as XLM, and USDC, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_flexible.js" data-base_asset_code="" data-base_asset_type="credit_alphanum4" data-base_asset_issuer="" data-counter_asset_code="" data-counter_asset_type="" data-counter_asset_issuer=""></script>**_
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stellar.js" data-base_asset_code="AFR" data-base_asset_type="credit_alphanum4" data-base_asset_issuer="GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W" data-counter_asset_code="USDC" data-counter_asset_type="credit_alphanum4" data-counter_asset_issuer="GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"></script>**_
+
+_**Attributes:**_
+
+**data-base_asset_code:** The Stellar asset code of the base asset (token) for which you want to retrieve an exchange rate in the counter asset.
+**data-base_asset_type:** The Stellar blockchain asset type of the base asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+**data-base_asset_issuer** The Stellar blockchain address of the base asset issuer or 'native' if base asset is XLM.
+**data-counter_asset_code:** The Stellar asset code of the counter asset (token) in which you want to retrieve an exchange rate for the base asset.
+**data-counter_asset_type:** The Stellar blockchain asset type of the counter asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+**data-counter_asset_issuer** The Stellar blockchain address of the counter asset issuer or 'native' if counter asset is XLM.
+
+_**Reference:**_
+
+**Supported assets:** https://api.afreum.com/tokens/afr_token_flexible.json; https://api.afreum.com/tokens/afr_token_other.json  
+
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Afreum Stable Country Tokens** (which are the same rates as the underlying fiat) supported by Afreum Ecosystem, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable.js" data-api_key="" data-base_currency="USD" data-stable_token=""></script>**_
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable.js" data-api_key="9b14c10ebd44327b48c36b3d" data-base_currency="USD" data-stable_token="SGBP"></script>**_
+
+_**Attributes:**_
+
+**data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+**data-base_currency:** The fiat currency in which to calculate the exchange rate of the stable token. E.g. USD, EUR or HKD.
+**data-stable_token** The stable token for which to calculate the exchange rate in fiat currency. E.g. SUSD, SEUR or SHKD.
+
+_**Reference:**_
+
+**Supported assets:** https://api.afreum.com/tokens/afr_token_stable.json; All fiat currencies.
+
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Fiat Currencies** supported by Afreum Ecosystem, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_fiat.js" data-api_key="" data-base_currency="USD"  data-counter_currency=""></script>**_
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_fiat.js" data-api_key="9b14c10ebd44327b48c36b3d" data-base_currency="USD"  data-counter_currency="GBP"></script>**_
+
+**data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+**data-base_currency:** The fiat currency for which to calculate the exchange rate. E.g. USD, EUR or HKD.
+**data-counter_currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
+
+_**Reference:**_
+
+**Supported assets:** All fiat currency pairs.
+
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Third Party Cryptos**, such as BBTC, ETH, ADA etc. supported by Afreum Ecosystem, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js" data-api_key="" data-crypto="" data-currency="USD"></script>**_
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js" data-api_key="A2B6169C-7B45-4C23-9FCB-1493EB9BB9A8" data-crypto="BTC" data-currency="USD"></script>**_
+
+**data-api_key:** The **https://coinapi.io/** crypto exchange rate API key. You should replace the one in the code example with your own.
+**data-crypto:** The cryptocurrency for which to calculate the exchange rate. E.g. BTC, ETH or XLM.
+**data-currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
+
+_**Reference:**_
+
+**Supported assets:** https://api.afreum.com/tokens/afr_token_stable.json; All fiat currency pairs.
 
 
-**NOTE:** The **src** can be replaced with the following **IPFS** links for immutability:
-
-* **tokens_all.js:** https://ipfs.io/ipfs/QmaMctndGzotgqKhMZBVxAdc7AY9MtzkDpwwf1auXGpCX1
-* **tokens_flexible.js:**
-* **tokens_stable.js:**  
-* **tokens_other.js:** https://ipfs.io/ipfs/QmUst5okvfhKV2w4BkbZpNdtLxwSdtz5de8NKmJZ4QNRpL
-* **tokens_external.js:** https://ipfs.io/ipfs/Qmbgzfq5Z7sFTeQFqEtDwEkpJvgYwiQmF3PNrXKbCpnBXF
-
-* **countries.js:** https://ipfs.io/ipfs/QmTrJDw1g4RTx7XN8chLr2joDu3XNoY4n98d5LiosUZRPg
-* **provinces.js:** https://ipfs.io/ipfs/QmYdZ4NX2wFg7dJqcCnfvZx7f3pBxW175LBeKcu9MCDW8T
-* **cities.js:** https://ipfs.io/ipfs/QmYEsFMPK6XUFzxtaeQd9dRfyNv3GkqE8D7qLQ4ct7Cwg5
-
-* **rates_stellar.js:**
-* **rates_stable.js:**
-* **rates_fiat.js:**
-* **rates_crypto.js:**
-
-**NOTE:** Afreum uses 7 decimal places for final exchange rates used in Stellar blockchain transactions. Developers should use 7 decimal places for exchange rates and token amounts prior to sending transactions to the Stellar blockchain.
+**NOTE:** Use these scripts only for UI display purposes. To calculate exchange rates for trasactions please use the universal rates APIs listed below under **API QUERY LINKS: EXCHANGE RATES**. In addition, Afreum uses 7 decimal places for final exchange rates used in Stellar blockchain transactions. Developers should use 7 decimal places for exchange rates and token amounts prior to sending transactions to the Stellar blockchain.
 
      
 
@@ -309,3 +335,10 @@ Calling the Token Query URL with the url parameter **is_country_token=1** will r
 
 **is_native=[]:** value is a boolean (either 1 or 0, 1 will return the XLM token, 0 will return non-XLM tokens; only useful for querying afr_token_other.json)
 Calling the Token Query URL with the url parameter **is_native=1** will return data for the XLM token.
+
+
+
+
+# API QUERY LINKS: EXCHANGE RATES
+
+Please refer to the rates-api repo:
