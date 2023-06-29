@@ -236,16 +236,22 @@ _**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stella
 _**Attributes:**_
 
 **data-base_asset_code:** The Stellar asset code of the base asset (token) for which you want to retrieve an exchange rate in the counter asset.
+
 **data-base_asset_type:** The Stellar blockchain asset type of the base asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+
 **data-base_asset_issuer** The Stellar blockchain address of the base asset issuer or 'native' if base asset is XLM.
+
 **data-counter_asset_code:** The Stellar asset code of the counter asset (token) in which you want to retrieve an exchange rate for the base asset.
+
 **data-counter_asset_type:** The Stellar blockchain asset type of the counter asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+
 **data-counter_asset_issuer** The Stellar blockchain address of the counter asset issuer or 'native' if counter asset is XLM.
 
 _**Reference:**_
 
 **Supported assets:** https://api.afreum.com/tokens/afr_token_flexible.json; https://api.afreum.com/tokens/afr_token_other.json  
 
+===
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Afreum Stable Country Tokens** (which are the same rates as the underlying fiat) supported by Afreum Ecosystem, filtered by the script attributes:
 
@@ -254,12 +260,16 @@ _**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable
 _**Attributes:**_
 
 **data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+
 **data-base_currency:** The fiat currency in which to calculate the exchange rate of the stable token. E.g. USD, EUR or HKD.
+
 **data-stable_token** The stable token for which to calculate the exchange rate in fiat currency. E.g. SUSD, SEUR or SHKD.
 
 _**Reference:**_
 
 **Supported assets:** https://api.afreum.com/tokens/afr_token_stable.json; All fiat currencies.
+
+===
 
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Fiat Currencies** supported by Afreum Ecosystem, filtered by the script attributes:
@@ -267,20 +277,25 @@ _**Reference:**_
 _**<script type="text/javascript" src="https://api.afreum.com/rates/rates_fiat.js" data-api_key="9b14c10ebd44327b48c36b3d" data-base_currency="USD"  data-counter_currency="GBP"></script>**_
 
 **data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+
 **data-base_currency:** The fiat currency for which to calculate the exchange rate. E.g. USD, EUR or HKD.
+
 **data-counter_currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
 
 _**Reference:**_
 
 **Supported assets:** All fiat currency pairs.
 
+===
 
 * Retrieve exchange rates in **USD**, or another fiat currency, for all **Third Party Cryptos**, such as BBTC, ETH, ADA etc. supported by Afreum Ecosystem, filtered by the script attributes:
 
 _**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js" data-api_key="A2B6169C-7B45-4C23-9FCB-1493EB9BB9A8" data-crypto="BTC" data-currency="USD"></script>**_
 
 **data-api_key:** The **https://coinapi.io/** crypto exchange rate API key. You should replace the one in the code example with your own.
+
 **data-crypto:** The cryptocurrency for which to calculate the exchange rate. E.g. BTC, ETH or XLM.
+
 **data-currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
 
 _**Reference:**_
