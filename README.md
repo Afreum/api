@@ -311,46 +311,105 @@ _**Reference:**_
 
 In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of URLs that can be queried via URL parameters to return filtered JSON results. These include:
 
-**Token Query URL** https://afreum.com/ice/sites/app/api/tokens.cfm
+**1. Token Query URL** https://afreum.com/ice/sites/app/api/tokens.cfm
 
 **USAGE**
 Calling the Token Query URL directly returns all the tokens listed in afr_token_all.json (as shown here: https://ipfs.io/ipfs/QmSJWA8ht58PPnZjmLRjLHmChseYNmota7TVA18N6GgQvL), namely the flexible Afreum tokens, including AFR, AFRX and flexible country tokens such as ANGN.
 
 URL parameters are: 
 
-**json=[]:** value is one of the json filenames without the .json extension, namely **afr_token_all, afr_token_flexible, afr_token_stable, afr_token_other**
+* **json=[]:** value is one of the json filenames without the .json extension, namely **afr_token_all, afr_token_flexible, afr_token_stable, afr_token_other**
 Calling the Token Query URL with the url parameter **json=** will return all the tokens listed in that JSON file. E.g. **https://afreum.com/ice/sites/app/api/tokens.cfm?json=afr_token_stable** (without the .json extension) will return all Afreum stable country tokens, which are backed by USDC.
 
-**token=[]:** value is a comma-separated list of valid Afreum tokens, or supported third party tokens
+* **token=[]:** value is a comma-separated list of valid Afreum tokens, or supported third party tokens
 Calling the Token Query URL with the url parameter **token=ANGN,AKES** will return data for the tokens in your comma-separated list.
 
-
-**issuer=[]:** value is the 56 character Stellar address of the token issuer. 
+* **issuer=[]:** value is the 56 character Stellar address of the token issuer. 
 Calling the Token Query URL with the url parameter **issuer=GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W** will return data for the tokens issued by that issuer, in this case the AFR token.
 
-**domain=[]:** value is the domain name of the token issuer. For Afreum tokens these are **afreum.com or afreum.net**
+* **domain=[]:** value is the domain name of the token issuer. For Afreum tokens these are **afreum.com or afreum.net**
 Calling the Token Query URL with the url parameter **domain=afreum.com** will return data for the tokens issued by that domain.
 
-**fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values are **id,token,issuer,domain,description,is_main,is_governance,is_country_token,is_africa,DTI,DTI_Long_Name,logo**
+* **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values are **id,token,issuer,domain,description,is_main,is_governance,is_country_token,is_africa,DTI,DTI_Long_Name,logo**
 Calling the Token Query URL with the url parameter **fields=token,issuer,domain,logo** will return data containing only the JSON fields specified in your comma separated list.
 
-**sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Accepted values are **id (default),token,is_main,is_native** Calling the Token Query URL with the url parameter **sort=token** will return data sorted by the field specified ascending.
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Accepted values are **id (default),token,is_main,is_native** Calling the Token Query URL with the url parameter **sort=token** will return data sorted by the field specified ascending.
 
-**is_africa=[]:** value is a boolean (either 1 or 0, 1 will return all African country tokens and 0 will return all non-African country tokens)
+* **is_africa=[]:** value is a boolean (either 1 or 0, 1 will return all African country tokens and 0 will return all non-African country tokens)
 Calling the Token Query URL with the url parameter **is_africa=1** will return data for the African country tokens.
 
-**is_main=[]:** value is a boolean (either 1 or 0, 1 will return the AFR token, 0 will return non-AFR tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
+* **is_main=[]:** value is a boolean (either 1 or 0, 1 will return the AFR token, 0 will return non-AFR tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
 Calling the Token Query URL with the url parameter **is_main=1** will return data for the AFR token.
 
-**is_governance=[]:** value is a boolean (either 1 or 0, 1 will return the AFRX token, 0 will return non-AFRX tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
+* **is_governance=[]:** value is a boolean (either 1 or 0, 1 will return the AFRX token, 0 will return non-AFRX tokens; only useful for querying afr_token_all.json and afr_token_flexible.json)
 Calling the Token Query URL with the url parameter **is_governance=1** will return data for the AFRX token.
 
-**is_country_token=[]:** value is a boolean (either 1 or 0, 1 will return country tokens, 0 will return non-country tokens such as AFR and AFRX)
+* **is_country_token=[]:** value is a boolean (either 1 or 0, 1 will return country tokens, 0 will return non-country tokens such as AFR and AFRX)
 Calling the Token Query URL with the url parameter **is_country_token=1** will return data for the Afreum country tokens. These tokens may be Afreum flexible tokens, Afreum stable tokens, or third party tokens.
 
-**is_native=[]:** value is a boolean (either 1 or 0, 1 will return the XLM token, 0 will return non-XLM tokens; only useful for querying afr_token_other.json)
+* **is_native=[]:** value is a boolean (either 1 or 0, 1 will return the XLM token, 0 will return non-XLM tokens; only useful for querying afr_token_other.json)
 Calling the Token Query URL with the url parameter **is_native=1** will return data for the XLM token.
 
+
+**2. Countries Query URL** https://afreum.com/ice/sites/app/api/countries.cfm
+
+**USAGE**
+Calling the Countries Query URL directly returns all the countries supported by the Afreum Ecosystem as shown here: **https://api.afreum.com/geo/afr_country.json**.
+
+URL parameters are: 
+
+* **id=[]:** value is the id of the country as indicated in the JSON file.
+
+* **iso_2=[]:** value is the ISO 2 country code of a specific country. Calling the Countries Query URL with the url parameter **iso_2=CN** will return data for China.
+
+* **iso_3=[]:** value is the ISO 3 country code of a specific country. Calling the Countries Query URL with the url parameter **iso_3=CHN** will return data for China.
+
+* **objectid=[]:** value is the objectid of the country as indicated in the JSON file.
+
+* **contobjectid=[]:** value is the continent objectid of the country as indicated in the JSON file.
+
+* **is_africa=[]:** value is a boolean indicating whether to retrieve only African countries.
+Calling the Countries Query URL with the url parameter **is_africa=1** will return data for African countries.
+
+* **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values can be found here: **https://api.afreum.com/geo/afr_country.json** .
+
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Countries Query URL with the url parameter **sort=name** will return data sorted by the field specified ascending.
+
+
+**3. Provinces Query URL** https://afreum.com/ice/sites/app/api/provinces.cfm
+
+**USAGE**
+Calling the Provinces Query URL directly returns all the provinces supported by the Afreum Ecosystem as shown here: **https://api.afreum.com/geo/afr_state_province.json**.
+
+URL parameters are: 
+
+* **id=[]:** value is the id of the country as indicated in the JSON file.
+
+* **country_code=[]:** value is the ISO 2 country code of a specific country. Calling the Provinces Query URL with the url parameter **country_code=CN** will return data for China.
+
+* **iso_3=[]:** value is the ISO 3 country code of a specific country. Calling the Countries Query URL with the url parameter **iso_3=CHN** will return data for all the provinces in China.
+
+* **objectid=[]:** value is the objectid of the province as indicated in the JSON file.
+
+* **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values can be found here: **https://api.afreum.com/geo/afr_state_province.json** .
+
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Provinces Query URL with the url parameter **sort=Subdivision_Name** will return data sorted by the names of the the provinces ascending.
+
+
+**4. Cities Query URL** https://afreum.com/ice/sites/app/api/cities.cfm
+
+**USAGE**
+Calling the Cities Query URL directly without URL parameters does not return any data due to the size of the cities JSON file. Typcially you would query the file **https://api.afreum.com/geo/afr_city.json** (several hundred megabytes) with URL parameters.
+
+URL parameters are: 
+
+* **countryobjectid=[]:** value is the objectid of the country as indicated in the JSON file.
+
+* **objectid=[]:** value is the objectid of a specific country whose provinces you wish to retrieve. 
+
+* **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values are countryobjectid, and objectid.
+
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Cities Query URL with the url parameter **sort=name** will return data sorted by the names of the the provinces ascending.
 
 
 
