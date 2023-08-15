@@ -50,7 +50,7 @@ Developers may call this file directly to retrieve all Afreum tokens, excluding 
 
 **Unique Content Identifier (CID):** Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws
 
-**IPFS Link:** https://ipfs.io/ipfs/Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
+**IPFS Link:** https://ipfs.io/ipfs/Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws _[Recommend using an IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_flexible.json
 
@@ -90,7 +90,7 @@ Developers may call this file directly to retrieve all Afreum flexible tokens, i
 
 **Unique Content Identifier (CID):** Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR
 
-**IPFS Link:** https://ipfs.io/ipfs/Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
+**IPFS Link:** https://ipfs.io/ipfs/Qma66ovk8HGqsjv8R1Jod6aTr7bSfM5UFgqr3LsAR4QGFR _[Recommend using an IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_stable.json
 
@@ -126,7 +126,7 @@ Developers may call this file directly to retrieve all Afreum stable country tok
 
 **Unique Content Identifier (CID):** QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF
 
-**IPFS Link:** https://ipfs.io/ipfs/QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
+**IPFS Link:** https://ipfs.io/ipfs/QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF _[Recommend using an IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_other.json
 
@@ -162,7 +162,7 @@ Developers may call this file directly to retrieve all third-party Stellar-issue
 
 **Unique Content Identifier (CID):** QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc
 
-**IPFS Link:** https://ipfs.io/ipfs/QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
+**IPFS Link:** https://ipfs.io/ipfs/QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc _[Recommend using an IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
 **Afreum Link:** https://api.afreum.com/tokens/afr_token_external.json
 
@@ -309,7 +309,7 @@ _**Reference:**_
 
 # API QUERY LINKS: JSON
 
-In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of URLs that can be queried via URL parameters to return filtered JSON results. These include:
+In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of endpoints that can be queried via URL parameters to return filtered JSON results. These include:
 
 **1. Token Query URL** https://afreum.com/ice/sites/app/api/tokens.cfm
 
