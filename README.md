@@ -1,8 +1,8 @@
 # API
-The Afreum API is a collection of publically available **JSON** files on **IPFS**, Javascript files, and **API** URLs that return **JSON** or specific values. Anyone, including various teams developing for the **Afreum Ecosystem**, can build apps and services that leverage the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the **JSON** files to be immutable, and accessible to both internal and external developers. Wherever possible, developers should use the immutable files in their apps to ensure availability and consistency. The **JSON** files can be accessed here: **https://api.afreum.com**
+The Afreum API is a collection of publically available **JSON** files stored on **IPFS**, HTML and Javascript files , and **API** endpoints that return **JSON** or specific values. Anyone, including various teams developing for the **Afreum Ecosystem**, can build apps and services that leverage the Afreum Ecosystem, and the Stellar blockchain on which it runs. The goal is for the **JSON** files to be immutable, and accessible to both internal and external developers. Wherever possible, developers should use the IPFS hosted immutable files in their apps to ensure availability and consistency, but additional functionality may be available via the API endpoints. A general rule of thumb is to use **IPFS Links** to develop around a fixed dataset or to use the **Afreum Link** if you want your app to inherit future Afreum updates to the datasets. Files hosted on IPFS can be accessed here: **https://api.afreum.com**
 
 # Tokens
-The **Tokens API** consists of a number of **JSON** and **Javascript** files hosted on the **InterPlanetary File System (IPFS)**,  and a number of **URL**s that are queried using URL parameters that return JSON output, or in the case of rates, numeric values. Here are descriptions and links to the various files:
+The **Tokens API** consists of a number of **JSON** files, as well **HTML** files  that read **Javascript** files to output data. Files hosted on the **InterPlanetary File System (IPFS)**. There are also a number of **URL** endpoints that are queried using URL parameters and return JSON output, or in the case of rates, numeric values. Here are descriptions and links to the various static JSON files:
 
 # All Afreum Tokens
 
@@ -12,7 +12,7 @@ The **Tokens API** consists of a number of **JSON** and **Javascript** files hos
 
 **IPFS Link:** https://ipfs.io/ipfs/QmR6HWa5BExBLHFh9xzkyMqnyySgfDUY3MquQPRX2pTxQ1 _[Recommend using and IPFS-capable browser such as Brave to view. Other browsers may flag IPFS files as dangerous content.]_
 
-**Afreum Link:** https://api.afreum.com/tokens/afr_token_all.json
+**Afreum Link:** https://api.afreum.com/tokens/afr_token_all.json 
 
 This json file returns usefule dat on all 314 Afreum ecosytem tokens, including AFR, AFRX, Afreum flexible country tokens (starting with 'A') and USDC-backed Afreum stable country tokens (starting with 'S'). Returned fields include: 
 
@@ -180,53 +180,194 @@ Developers may call this file directly to retrieve all third-party tokens (exter
 
 # IMMUTABLE SCRIPTS: JAVASCRIPT
 
-Afreum also provides a number of immutable **Javascript** files on **IPFS** that developers can call on the client side to retrieve token, geolocation, rates, and other other data. These can be  called in HTML with **<script>** tags and data filtered via tage attributes. These scripts generally write the JSON results to the Javascript console, which developers can then use in their own code. The following scripts are available:
+Afreum also provides a number of immutable **HTML** files that call immutable **Javascript** files hosted on **IPFS**. Developers can "fetch" these HTML files on the client/server side to retrieve token, geolocation, rates, and other other data. Alternatively, developers can embed the **<script>** tags in the HTML files directly in their own pages and filter output based on URL parameters. The scripts generally write results to the Javascript console, and developers can utilize the variables in their own code. The following scripts are available:
 
 
 
 **Token Scripts**
 
-* Retrieve all Afreum tokens issued on Stellar, including AFR, AFRX, flexible country tokens and stable country tokens, filtered by the script attributes:
+* Retrieve all Afreum tokens issued on Stellar, including AFR, AFRX, flexible country tokens and stable country tokens, filterable by URL parameters:
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_all.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_stable="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+_Afreum Link:_
 
-* Retrieve all flexible Afreum tokens issued on Stellar, including AFR, AFRX, and flexible country tokens, filtered by the script attributes:
+**DATA SOURCE:** https://api.afreum.com/tokens/afr_token_all.json
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_flexible.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_main="" data-is_governance="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_all.js">**_
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_stable.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_country_token="" data-is_africa="" data-DTI="">**_
+**HTML:** https://api.afreum.com/tokens/tokens_all.html (**URL PARAMS:** id,token,issuer,domain,is_main,is_governance,is_country_token,is_africa,is_stable,DTI)
 
-* Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filtered by the script attributes:
+_IPFS Link:_
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_other.js" data-id="" data-token="" data-issuer="" data-domain="" data-is_native="" data-is_africa="" data-is_country_token="" data-DTI=""></script>**_
+**DATA SOURCE:** https://ipfs.io/ipfs/QmR6HWa5BExBLHFh9xzkyMqnyySgfDUY3MquQPRX2pTxQ1
 
-* Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filtered by the script attributes:
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/Qmeh8Ttexz5oZrjnPbh5qvhipm93Yiw7swrvEUDLzpBrMH">**_
 
-_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_external.js" data-id="" data-token=""></script>**_
+**HTML:** https://ipfs.io/ipfs/QmUkxHeLFpcckFMPkk9ZDZvmDmxiwrakbe8Az1WnS8V5EX (**URL PARAMS:** id,token,issuer,domain,is_main,is_governance,is_country_token,is_africa,is_stable,DTI)
+
+
+
+* Retrieve all flexible Afreum tokens issued on Stellar, including AFR, AFRX, and flexible country tokens, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/tokens/afr_token_flexible.json
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_flexible.js">**_
+
+**HTML:** https://api.afreum.com/tokens/tokens_flexible.html (**URL PARAMS:** id,token,issuer,domain,is_main,is_governance,is_country_token,is_africa,DTI)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/Qmdn6i61sZ7ARp3FEgLehxKH4emwqFEccbNJsehABcT9ws
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmS8diNTQYxuf9brPnArHcvoBC3erXCyBf1usJfF2eGdMt">**_
+
+**HTML:** https://ipfs.io/ipfs/QmWyf6F2A4QZX2dtKsWLuiojuSHPiDS6XVLd54FQuYEXaU (**URL PARAMS:** id,token,issuer,domain,is_main,is_governance,is_country_token,is_africa,DTI)
+
+
+
+* Retrieve all stable Afreum tokens issued on Stellar, including SNGN, SKES, and SZAR, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/tokens/afr_token_stable.json
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_stable.js">**_
+
+**HTML:** https://api.afreum.com/tokens/tokens_stable.html (**URL PARAMS:** id,token,issuer,domain,is_africa,DTI)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://api.afreum.com/tokens/afr_token_stable.json
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmU2y1WSqKcw3B5YZPqXoqi5HxrdBWHKtKgrX39bV5Nyva">**_
+
+**HTML:** https://ipfs.io/ipfs/Qmd4F6hUFHT23EMPAmh1rTTpK4muRG8ys4RcSeKdN3haAM (**URL PARAMS:** id,token,issuer,domain,is_africa,DTI)
+
+
+
+* Retrieve all non-Afreum tokens issued on Stellar, and supported by the Afreum Ecosystem, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/tokens/tokens_other.html 
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_other.js"></script>**_
+
+**HTML:** https://api.afreum.com/tokens/tokens_other.html (**URL PARAMS:** id,token,issuer,domain,is_native,is_africa,is_country_token,DTI)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmcPSLBnyiukw6go2VwTPtiXCHW9eYuGi6ezRstJuDhfiF
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmXDSnzqL2LcXJYNopqeKX4w2noZRhgkpX6m64MaWMv988"></script>**_
+
+**HTML:** https://api.afreum.com/tokens/tokens_other.html (**URL PARAMS:** id,token,issuer,domain,is_native,is_africa,is_country_token,DTI)
+
+
+
+
+* Retrieve all external coins, plus XLM, supported by the Afreum Ecosystem, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/tokens/tokens_external.html
+
+_**<script type="text/javascript" src="https://api.afreum.com/tokens/tokens_external.js"></script>**_
+
+**HTML:** https://api.afreum.com/tokens/tokens_external.html (**URL PARAMS:** id,token)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmRzh5BLr78GcfnWdZ9MkUDf9jCZ1R2XsxFmJbPcsLhbsc
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmZt22xgJJvsVuF8qStFvao7dCQLwXc6XgX1R4VvBv3Uaj"></script>**_
+
+**HTML:** https://cid.ipfs.tech/#Qme5LdapgKqLHUvZvtcVubUnywyFYbZydqL6UF3JvLJaJ2 (**URL PARAMS:** id,token)
+
 
 
 
 **Geolocation Scripts**
 
-Afreum is a global ecosystem so we also provide immutable **JSON** files providing useful geo data on countries, provinces, cities and so on. The following are useful scripts for this purpose:
+Afreum is a global ecosystem so we also provide immutable **JSON**, **Javascript** and **HTML** files, providing useful geo data on countries, provinces, cities and so on. The following are useful scripts for this purpose:
 
-* Retrieve all **Countries** supported by Afreum Ecosystem, filtered by the script attributes:
+* Retrieve all **Continents** supported by Afreum Ecosystem, filterable by URL parameters:
 
-_**<script type="text/javascript" src="https://api.afreum.com/geo/countries.js" data-id="" data-iso_2="" data-iso_3="" data-objectid="" data-contobjectid="" data-is_africa=""></script>**_
+_Afreum Link:_
 
-* Retrieve all **Provinces** supported by Afreum Ecosystem, filtered by the script attributes:
+**DATA SOURCE:** https://api.afreum.com/geo/afr_continent.json
 
-_**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js" data-Country_Code="" data-objectId=""></script>**_
+_**<script type="text/javascript" src="https://api.afreum.com/geo/continents.js"></script>**_
 
-* Retrieve all **Cities** supported by Afreum Ecosystem, filtered by the script attributes:
+**HTML:** https://api.afreum.com/geo/continents.html (**URL PARAMS:** objectId,code)
 
-_**<script type="text/javascript" src="https://api.afreum.com/geo/cities.js" data-countryobjectId="" data-objectId=""></script>**_
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmeFU4y1wx3SqGEdLmW6ybY7p4d5y4MeTxEuqeJtYo9Ptg
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmVDAFsbC8jHKqfQaDD9CAYSXC2zAx6PSfLE3rp2HdXYqQ"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmdDK5bongkUbKhktE9qCoVH7PZC7ZCxfvLo9RcWEDwuEQ (**URL PARAMS:** objectId,code)
+
+
+
+* Retrieve all **Countries** supported by Afreum Ecosystem, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/geo/afr_country.json
+
+_**<script type="text/javascript" src="https://api.afreum.com/geo/countries.js"></script>**_
+
+**HTML:** https://api.afreum.com/geo/countries.html (**URL PARAMS:** id,iso_2,iso_3,objectid,contobjectid,is_africa)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmQyooayWaQepHBJrEVyjd3iqr1qCZ6AaAVGVnrjSam4ym
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmY98JvWQ6jQaa7ZEks9USmJi52KvSSkwkJfL1CFJtkRat"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmRz3kmzK8tcTatkT2gsxmi34PCiSbLFViNnhDuG9sUhvy (**URL PARAMS:** id,iso_2,iso_3,objectid,contobjectid,is_africa)
+
+
+
+* Retrieve all **Provinces** supported by Afreum Ecosystem, filterable by URL parameters:
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/geo/afr_state_province.json
+
+_**<script type="text/javascript" src="https://api.afreum.com/geo/provinces.js"></script>**_
+
+**HTML:** https://api.afreum.com/geo/provinces.html (**URL PARAMS:** Country_Code, objectId)
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmYpFDg3t8UydEZYqvYBuqvkMXnXwQN9cQ8y7J1xb2CVkz
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmfTaKFXJrQLFKvznUYBPBnNQHPC9MsfGA16Ti9XNdGXW3"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmdbLKX3yxjAJJuz2xD7kNSRVz4tdm3mo6tQ344FvRK21L (**URL PARAMS:** Country_Code, objectId)
+
+
+
+* Retrieve all **Cities** supported by Afreum Ecosystem, filterable by URL parameters. Due to the size of the Cities JSON file, it is recommended that the data files are downloaded to a server and imported into a database such as Mongo DB.
+
+_Afreum Link:_
+
+**DATA SOURCE:** https://api.afreum.com/geo/afr_city.json
+
+_IPFS Link:_
+
+**DATA SOURCE:** https://ipfs.io/ipfs/QmaGaJL1hqjv48KegSfDZkxZ5VjFmsXkiokzdiRdnigQiv 
+
 
 
 
 **Exchange Rate Scripts**
 
-Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts. **IMPORTANT:** Rates returned are for UI display only. For actual production transactions, please use the universal exchange rates endpoints listed below under **API QUERY LINKS: EXCHANGE RATES**
+Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens and fiat currencies supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts and in limited scenarios an API ACCESS KEY may be required. **IMPORTANT:** Rates returned are for UI display only. For actual production transactions, please use the universal exchange rates endpoints listed below under **API QUERY LINKS: EXCHANGE RATES**
 
 
 * Retrieve exchange rates between **Stellar Assets** supported by Afreum Ecosystem, including AFR, AFRX, Afreum flexible country tokens, and other Stellar assets such as XLM, and USDC, filtered by the script attributes:
