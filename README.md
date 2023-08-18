@@ -625,4 +625,4 @@ URL parameters are:
 
 # API QUERY LINKS: EXCHANGE RATES
 
-Please refer to the rates-api repo:
+Please refer to the rates-api repo: **https://github.com/Afreum/api-rates**
