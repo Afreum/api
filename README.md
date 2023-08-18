@@ -370,87 +370,140 @@ _IPFS Link:_
 Afreum provides immutable **Javascript** files that facilitate the calculation of exchange rates between all tokens and fiat currencies supported by the Afreum Ecosystem. Please note that these scripts use Stellar Horizon APIs and/or third party exchange rate APIs. Afreum makes no warranties as to the accuracy or consistency of the exchange rates returned by these scripts. It is the responsibility of the developer to check the accuracy of the exchange rates, and to implement the appropriate error checks to ensure smooth operation of their apps. In some cases, developers are required to obtain their own API keys from third party exchange rate providers to use the scripts and in limited scenarios an API ACCESS KEY may be required. **IMPORTANT:** Rates returned are for UI display only. For actual production transactions, please use the universal exchange rates endpoints listed below under **API QUERY LINKS: EXCHANGE RATES**
 
 
-* Retrieve exchange rates between **Stellar Assets** supported by Afreum Ecosystem, including AFR, AFRX, Afreum flexible country tokens, and other Stellar assets such as XLM, and USDC, filtered by the script attributes:
+* Retrieve exchange rates between **Stellar Assets** supported by Afreum Ecosystem, including AFR, AFRX, Afreum flexible country tokens, and other Stellar assets such as XLM, and USDC, filterable by URL parameters:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stellar.js" data-base_asset_code="AFR" data-base_asset_type="credit_alphanum4" data-base_asset_issuer="GBX6YI45VU7WNAAKA3RBFDR3I3UKNFHTJPQ5F6KOOKSGYIAM4TRQN54W" data-counter_asset_code="USDC" data-counter_asset_type="credit_alphanum4" data-counter_asset_issuer="GA5ZSEJYB37JRC5AVCIA5MOP4RHTM335X2KGX3IHOJAPP5RE34K4KZVN"></script>**_
+_Afreum Link:_
 
-_**Attributes:**_
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stellar.js"></script>**_
 
-**data-base_asset_code:** The Stellar asset code of the base asset (token) for which you want to retrieve an exchange rate in the counter asset.
+**HTML:** https://api.afreum.com/rates/rates_stellar.html
 
-**data-base_asset_type:** The Stellar blockchain asset type of the base asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+_IPFS Link:_
 
-**data-base_asset_issuer** The Stellar blockchain address of the base asset issuer or 'native' if base asset is XLM.
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmR59DjjqtQjkMB9UPtTMtrfZJgPzQ1nWqP2swEf39nVee"></script>**_
 
-**data-counter_asset_code:** The Stellar asset code of the counter asset (token) in which you want to retrieve an exchange rate for the base asset.
+**HTML:** https://ipfs.io/ipfs/QmUdrEJ9LxQ67J2qGdr5BdMWX7CCQa7eejKWWKLPXNbKqu
 
-**data-counter_asset_type:** The Stellar blockchain asset type of the counter asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
 
-**data-counter_asset_issuer** The Stellar blockchain address of the counter asset issuer or 'native' if counter asset is XLM.
+_**URL Parameters:**_
+
+**base_asset_code:** The Stellar asset code of the base asset (token) for which you want to retrieve an exchange rate in the counter asset.
+
+**base_asset_type:** The Stellar blockchain asset type of the base asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+
+**base_asset_issuer** The Stellar blockchain address of the base asset issuer or 'native' if base asset is XLM.
+
+**counter_asset_code:** The Stellar asset code of the counter asset (token) in which you want to retrieve an exchange rate for the base asset.
+
+**counter_asset_type:** The Stellar blockchain asset type of the counter asset. Usually 'credit_alphanum4' for non-XLM assets and 'native' for XLM.
+
+**counter_asset_issuer** The Stellar blockchain address of the counter asset issuer or 'native' if counter asset is XLM.
 
 _**Reference:**_
 
 **Supported assets:** https://api.afreum.com/tokens/afr_token_flexible.json; https://api.afreum.com/tokens/afr_token_other.json  
 
+
 ===
 
-* Retrieve exchange rates in **USD**, or another fiat currency, for all **Afreum Stable Country Tokens** (which are the same rates as the underlying fiat) supported by Afreum Ecosystem, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable.js" data-api_key="9b14c10ebd44327b48c36b3d" data-base_currency="USD" data-stable_token="SGBP"></script>**_
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Afreum Stable Country Tokens** (which are the same rates as the underlying fiat) supported by Afreum Ecosystem, filterable by URL parameters:
 
-_**Attributes:**_
+_Afreum Link:_
 
-**data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_stable.js"></script>**_
 
-**data-base_currency:** The fiat currency in which to calculate the exchange rate of the stable token. E.g. USD, EUR or HKD.
+**HTML:** https://api.afreum.com/rates/rates_stable.html
 
-**data-stable_token** The stable token for which to calculate the exchange rate in fiat currency. E.g. SUSD, SEUR or SHKD.
+_IPFS Link:_
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmPGwYewB1gn9A5QCwmsANeCmYFYL4spJUmykumpQ24688"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmRtAhjimWZnCN74zN5g3AH9eF3P73LyS3xQzsfNAp2ShB
+
+
+_**URL Parameters:**_
+
+**api_key:** Get a free or paid API key from  **https://exchangerate-api.com/**.
+
+**base_currency:** The fiat currency in which to calculate the exchange rate of the stable token. E.g. USD, EUR or HKD.
+
+**stable_token** The stable token for which to calculate the exchange rate in fiat currency. E.g. SUSD, SEUR or SHKD.
 
 _**Reference:**_
 
 **Supported assets:** https://api.afreum.com/tokens/afr_token_stable.json; All fiat currencies.
 
+
 ===
 
 
-* Retrieve exchange rates in **USD**, or another fiat currency, for all **Fiat Currencies** supported by Afreum Ecosystem, filtered by the script attributes:
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Fiat Currencies** supported by Afreum Ecosystem, filterable by URL parameters:
+
+_Afreum Link:_
 
 _**<script type="text/javascript" src="https://api.afreum.com/rates/rates_fiat.js" data-api_key="9b14c10ebd44327b48c36b3d" data-base_currency="USD"  data-counter_currency="GBP"></script>**_
 
-**data-api_key:** The **https://exchangerate-api.com/** exchange rate API key. You should replace the one in the code example with your own.
+**HTML:** https://api.afreum.com/rates/rates_fiat.html
 
-**data-base_currency:** The fiat currency for which to calculate the exchange rate. E.g. USD, EUR or HKD.
+_IPFS Link:_
 
-**data-counter_currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/Qmc46qNPGApaMp3LRgPBg5yNJshT4CcK7GQUz5m7uswSmt"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmcqDawfrS6RagApEEH8ZHZZUrwRTDarJq9XU3AdMAHQfV
+
+
+_**URL Parameters:**_
+
+**api_key:** Get a free or paid API key from  **https://exchangerate-api.com/**.
+
+**base_currency:** The fiat currency for which to calculate the exchange rate. E.g. USD, EUR or HKD.
+
+**counter_currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
 
 _**Reference:**_
 
 **Supported assets:** All fiat currency pairs.
 
+
 ===
 
-* Retrieve exchange rates in **USD**, or another fiat currency, for all **Third Party Cryptos**, such as BBTC, ETH, ADA etc. supported by Afreum Ecosystem, filtered by the script attributes:
 
-_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js" data-api_key="A2B6169C-7B45-4C23-9FCB-1493EB9BB9A8" data-crypto="BTC" data-currency="USD"></script>**_
+* Retrieve exchange rates in **USD**, or another fiat currency, for all **Third Party Cryptos**, such as BBTC, ETH, ADA etc. supported by Afreum Ecosystem, filterable by URL parameters:
 
-**data-api_key:** The **https://coinapi.io/** crypto exchange rate API key. You should replace the one in the code example with your own.
+_Afreum Link:_
 
-**data-crypto:** The cryptocurrency for which to calculate the exchange rate. E.g. BTC, ETH or XLM.
+_**<script type="text/javascript" src="https://api.afreum.com/rates/rates_crypto.js"></script>**_
 
-**data-currency** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
+**HTML:** https://api.afreum.com/rates/rates_crypto.html
+
+_IPFS Link:_
+
+_**<script type="text/javascript" src="https://ipfs.io/ipfs/QmPgfFJqcSuP8hwdf2xgMKLtTS8BWjFtjrLX2FR9MzGvDc"></script>**_
+
+**HTML:** https://ipfs.io/ipfs/QmQBgkUGvxFxDZCwFYfiZHQpiW8n6jac9QS6S6nx4SCpm8
+
+
+_**URL Parameters:**_
+
+**api_key:** Get a free or paid API key from **https://coinapi.io/**.
+
+**crypto:** The cryptocurrency for which to calculate the exchange rate. E.g. BTC, ETH or XLM.
+
+**fiat** The fiat currency in which to calculate the exchange rate. E.g. USD, EUR or HKD.
 
 _**Reference:**_
 
-**Supported assets:** https://api.afreum.com/tokens/afr_token_stable.json; All fiat currency pairs.
+**Supported assets:** https://api.afreum.com/tokens/afr_token_external.json; All fiat currency pairs.
 
 
-**NOTE:** Use these scripts only for UI display purposes. To calculate exchange rates for trasactions please use the universal rates APIs listed below under **API QUERY LINKS: EXCHANGE RATES**. In addition, Afreum uses 7 decimal places for final exchange rates used in Stellar blockchain transactions. Developers should use 7 decimal places for exchange rates and token amounts prior to sending transactions to the Stellar blockchain.
+**NOTE:** Use these HTML files and scripts only for development UI display purposes and use the APIs for production. To calculate exchange rates for trasactions please use the universal rates API (which can retrieve rates for ALL pairs) listed below under **API QUERY LINKS: EXCHANGE RATES**. In addition, Afreum uses 7 decimal places for final exchange rates used in Stellar blockchain transactions. Developers should use 7 decimal places for token amounts prior to sending transactions to the Stellar blockchain.
 
      
 
 # API QUERY LINKS: JSON
 
-In addition to the immutable **IPFS JSON** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of endpoints that can be queried via URL parameters to return filtered JSON results. These include:
+In addition to the immutable **IPFS** files that can be called remotely by developers and manipulated locally or on the server, Afreum also hosts a number of endpoints that can be queried via URL parameters to return filtered JSON results. These include:
 
 **1. Token Query URL** https://afreum.com/ice/sites/app/api/tokens.cfm
 
@@ -534,10 +587,26 @@ URL parameters are:
 
 * **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values can be found here: **https://api.afreum.com/geo/afr_state_province.json** .
 
-* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Provinces Query URL with the url parameter **sort=Subdivision_Name** will return data sorted by the names of the the provinces ascending.
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Provinces Query URL with the url parameter **sort=Subdivision_Name** will return data sorted by the names of the provinces ascending.
 
 
-**4. Cities Query URL** https://afreum.com/ice/sites/app/api/cities.cfm
+**4. Continents Query URL** https://afreum.com/ice/sites/app/api/continents.cfm
+
+**USAGE**
+Calling the Continents Query URL directly returns all the continents supported by the Afreum Ecosystem as shown here: **https://api.afreum.com/geo/continent.json**.
+
+URL parameters are: 
+
+* **code=[]:** value is the 2-character code of a specific continent. Calling the Provinces Query URL with the url parameter **code=AF** will return data for Africa.
+
+* **objectid=[]:** value is the objectid of the continent as indicated in the JSON file.
+
+* **fields=[]:** value is a comma-separated list of fields you would like to return in the JSON results. Accepted values can be found here: **https://api.afreum.com/geo/afr_continent.json** .
+
+* **sort=[]:** value is how you would like the JSON results to be sorted, in ascending order only. Calling the Continents Query URL with the url parameter **sort=name** will return data sorted by the names of the continents ascending.
+
+
+**5. Cities Query URL** https://afreum.com/ice/sites/app/api/cities.cfm
 
 **USAGE**
 Calling the Cities Query URL directly without URL parameters does not return any data due to the size of the cities JSON file. Typcially you would query the file **https://api.afreum.com/geo/afr_city.json** (several hundred megabytes) with URL parameters.
